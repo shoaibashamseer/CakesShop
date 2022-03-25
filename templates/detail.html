@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<div class="row">
+    <div class="col-md-6" style="margin-top:10px">
+        <img src="{{cakes.img.url}}" width="300" height="400">
+    </div>
+    <div class="col-md-6">
+        <h2>{{cakes.name}}</h2>
+        <p>{{cakes.desc}}</p>
+         <h6>{{cakes.price}}</h6>
+        <a class="btn btn-warning" href="{% url 'myproject:update' cakes.id %}">Update</a>
+        <a class="btn btn-warning" href="{% url 'myproject:delete' cakes.id %}">Delete</a>
+    </div>
+</div>
+</div>
+
+{% endblock %}
